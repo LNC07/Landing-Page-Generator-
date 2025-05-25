@@ -2,101 +2,145 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ছবি ল্যান্ডিং পেজ</title>
+  <title>ছবি থেকে ল্যান্ডিং পেজ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
       margin: 0;
       padding: 20px;
+      text-align: center;
     }
-
+    .ad-banner {
+      margin: 15px 0;
+    }
+    #previewImage {
+      max-width: 90%;
+      border-radius: 10px;
+    }
     #uploadSection, #landingSection {
       display: none;
     }
-
-    .banner {
-      margin: 10px auto;
-      width: 90%;
-      max-width: 728px;
-      height: 90px;
-      background-color: #e0e0e0;
-      line-height: 90px;
-      font-size: 18px;
-      color: #444;
-      border: 2px dashed #999;
-    }
-
-    img {
-      max-width: 90%;
-      height: auto;
-      margin: 10px 0;
-    }
-
     button {
-      padding: 12px 25px;
-      font-size: 18px;
-      border: none;
-      background-color: #d10000;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #007bff;
       color: white;
-      border-radius: 8px;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
-      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-  <div id="uploadSection">
-    <h2>ছবি আপলোড করে ল্যান্ডিং পেজ তৈরি করুন</h2>
+  <h2>ছবি আপলোড করুন</h2>
+  <div id="uploadSection" style="display:block;">
     <input type="file" id="imageInput" accept="image/*"><br><br>
     <button onclick="generateLanding()">ল্যান্ডিং পেজ তৈরি করুন</button>
   </div>
 
   <div id="landingSection">
-    <!-- ছবির উপরের 2টি ব্যানার -->
-    <div class="banner">ব্যানার ১ (উপরে)</div>
-    <div class="banner">ব্যানার ২ (উপরে)</div>
+    <!-- Top Ad Banner 1 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
 
-    <!-- ছবি -->
-    <img id="previewImage" src="" alt="Uploaded Image">
+    <!-- Top Ad Banner 2 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
+
+    <!-- Uploaded Image -->
+    <img id="previewImage" src="#" alt="আপলোড করা ছবি"><br><br>
 
     <!-- Watch Now Button -->
     <button onclick="watchNow()">Watch Now</button>
 
-    <!-- নিচের 3টি ব্যানার -->
-    <div class="banner">ব্যানার ৩ (নিচে)</div>
-    <div class="banner">ব্যানার ৪ (নিচে)</div>
-    <div class="banner">ব্যানার ৫ (নিচে)</div>
+    <!-- Bottom Ad Banner 1 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
+
+    <!-- Bottom Ad Banner 2 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
+
+    <!-- Bottom Ad Banner 3 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
   </div>
 
   <script>
-    document.getElementById('uploadSection').style.display = 'block';
-
     function generateLanding() {
-      const input = document.getElementById('imageInput');
+      const input = document.getElementById("imageInput");
       const file = input.files[0];
-
       if (!file) {
         alert("একটি ছবি নির্বাচন করুন");
         return;
       }
 
       const reader = new FileReader();
-      reader.onload = function(e) {
-        document.getElementById('previewImage').src = e.target.result;
-        document.getElementById('uploadSection').style.display = 'none';
-        document.getElementById('landingSection').style.display = 'block';
+      reader.onload = function (e) {
+        document.getElementById("previewImage").src = e.target.result;
+        document.getElementById("uploadSection").style.display = "none";
+        document.getElementById("landingSection").style.display = "block";
       };
       reader.readAsDataURL(file);
     }
 
     function watchNow() {
-      window.location.href = "https://example.com"; // এখানে তোমার ডিরেক্ট লিংক বসাও
+      window.location.href = "https://www.profitableratecpm.com/zzxwsgmjy?key=35033258a34c1b2f82a7b1d2a346fbe1";
     }
   </script>
 
 </body>
-</html>
+  </html>
