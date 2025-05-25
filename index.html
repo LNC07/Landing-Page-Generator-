@@ -1,146 +1,122 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ছবি থেকে ল্যান্ডিং পেজ</title>
+  <title>Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f8ff;
+      background: #f0f0f0;
+      text-align: center;
       margin: 0;
       padding: 20px;
-      text-align: center;
     }
+
     .ad-banner {
-      margin: 15px 0;
+      margin: 10px auto;
     }
-    #previewImage {
-      max-width: 90%;
+
+    img {
+      max-width: 95%;
+      height: auto;
+      margin: 20px 0;
       border-radius: 10px;
     }
-    #uploadSection, #landingSection {
-      display: none;
-    }
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
+
+    .watch-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #ff5722;
+      color: #fff;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h2>ছবি আপলোড করুন</h2>
-  <div id="uploadSection" style="display:block;">
-    <input type="file" id="imageInput" accept="image/*"><br><br>
-    <button onclick="generateLanding()">ল্যান্ডিং পেজ তৈরি করুন</button>
-  </div>
-
-  <div id="landingSection">
-    <!-- Top Ad Banner 1 -->
-    <div class="ad-banner">
-      <script type="text/javascript">
-        atOptions = {
-          'key': 'b0b6f8f691c95027fe937714ba986e03',
-          'format': 'iframe',
-          'height': 90,
-          'width': 728,
-          'params': {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-    </div>
-
-    <!-- Top Ad Banner 2 -->
-    <div class="ad-banner">
-      <script type="text/javascript">
-        atOptions = {
-          'key': 'b0b6f8f691c95027fe937714ba986e03',
-          'format': 'iframe',
-          'height': 90,
-          'width': 728,
-          'params': {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-    </div>
-
-    <!-- Uploaded Image -->
-    <img id="previewImage" src="#" alt="আপলোড করা ছবি"><br><br>
-
-    <!-- Watch Now Button -->
-    <button onclick="watchNow()">Watch Now</button>
-
-    <!-- Bottom Ad Banner 1 -->
-    <div class="ad-banner">
-      <script type="text/javascript">
-        atOptions = {
-          'key': 'b0b6f8f691c95027fe937714ba986e03',
-          'format': 'iframe',
-          'height': 90,
-          'width': 728,
-          'params': {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-    </div>
-
-    <!-- Bottom Ad Banner 2 -->
-    <div class="ad-banner">
-      <script type="text/javascript">
-        atOptions = {
-          'key': 'b0b6f8f691c95027fe937714ba986e03',
-          'format': 'iframe',
-          'height': 90,
-          'width': 728,
-          'params': {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-    </div>
-
-    <!-- Bottom Ad Banner 3 -->
-    <div class="ad-banner">
-      <script type="text/javascript">
-        atOptions = {
-          'key': 'b0b6f8f691c95027fe937714ba986e03',
-          'format': 'iframe',
-          'height': 90,
-          'width': 728,
-          'params': {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-    </div>
-  </div>
-
-  <script>
-    function generateLanding() {
-      const input = document.getElementById("imageInput");
-      const file = input.files[0];
-      if (!file) {
-        alert("একটি ছবি নির্বাচন করুন");
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        document.getElementById("previewImage").src = e.target.result;
-        document.getElementById("uploadSection").style.display = "none";
-        document.getElementById("landingSection").style.display = "block";
+  <!-- Top Banner Ad 1 -->
+  <div class="ad-banner">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'b0b6f8f691c95027fe937714ba986e03',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
       };
-      reader.readAsDataURL(file);
-    }
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+  </div>
 
-    function watchNow() {
-      window.location.href = "https://www.profitableratecpm.com/zzxwsgmjy?key=35033258a34c1b2f82a7b1d2a346fbe1";
-    }
-  </script>
+  <!-- Top Banner Ad 2 -->
+  <div class="ad-banner">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'b0b6f8f691c95027fe937714ba986e03',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+  </div>
+
+  <!-- Main Image -->
+  <img src="your_uploaded_image_link_here.jpg" alt="Uploaded Image">
+
+  <!-- Watch Now Button -->
+  <br>
+  <button class="watch-button" onclick="window.location.href='https://www.profitableratecpm.com/zzxwsgmjy?key=35033258a34c1b2f82a7b1d2a346fbe1'">
+    Watch Now
+  </button>
+
+  <!-- Bottom Banner Ad 1 -->
+  <div class="ad-banner">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'b0b6f8f691c95027fe937714ba986e03',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+  </div>
+
+  <!-- Bottom Banner Ad 2 -->
+  <div class="ad-banner">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'b0b6f8f691c95027fe937714ba986e03',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+  </div>
+
+  <!-- Bottom Banner Ad 3 -->
+  <div class="ad-banner">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'b0b6f8f691c95027fe937714ba986e03',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+  </div>
 
 </body>
-  </html>
+</html>
