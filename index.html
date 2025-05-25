@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ছবি আপলোড করুন</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 40px;
+    }
+    input, button {
+      padding: 12px;
+      font-size: 16px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>আপনার ছবি আপলোড করুন</h1>
+  <input type="file" id="imageUpload" accept="image/*" />
+  <br>
+  <button onclick="createLanding()">ল্যান্ডিং পেজ তৈরি করুন</button>
+
+  <script>
+    function createLanding() {
+      const fileInput = document.getElementById('imageUpload');
+      const file = fileInput.files[0];
+
+      if (!file) {
+        alert('একটি ছবি নির্বাচন করুন।');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const base64Image = encodeURIComponent(e.target.result);
+        const link = `landing.html?img=${base64Image}`;
+        window.open(link, '_blank');
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
+</body>
+</html>
