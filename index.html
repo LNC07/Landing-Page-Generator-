@@ -2,121 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Landing Page</title>
+  <title>Image to Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-
-    .ad-banner {
-      margin: 10px auto;
-    }
-
-    img {
-      max-width: 95%;
-      height: auto;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
-
+    body { font-family: Arial; text-align: center; background: #f0f0f0; margin: 0; padding: 20px; }
+    .ad-banner { margin: 10px auto; }
+    .hidden { display: none; }
     .watch-button {
-      display: inline-block;
       padding: 12px 24px;
       font-size: 18px;
-      background-color: #ff5722;
-      color: #fff;
+      background: #ff5722;
+      color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
+    img { max-width: 95%; margin-top: 20px; border-radius: 10px; }
   </style>
 </head>
 <body>
 
-  <!-- Top Banner Ad 1 -->
-  <div class="ad-banner">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'b0b6f8f691c95027fe937714ba986e03',
-        'format': 'iframe',
-        'height': 90,
-        'width': 728,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+  <!-- Upload Form -->
+  <div id="uploadSection">
+    <h2>Upload Your Image</h2>
+    <input type="file" id="imageInput" accept="image/*"><br><br>
+    <button onclick="showLanding()">Create Landing Page</button>
   </div>
 
-  <!-- Top Banner Ad 2 -->
-  <div class="ad-banner">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'b0b6f8f691c95027fe937714ba986e03',
-        'format': 'iframe',
-        'height': 90,
-        'width': 728,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+  <!-- Landing Page Content -->
+  <div id="landingPage" class="hidden">
+    
+    <!-- Top Banner Ad 1 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
+
+    <!-- Top Banner Ad 2 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
+
+    <!-- Uploaded Image -->
+    <img id="uploadedImage" src="" alt="Uploaded Image"><br>
+
+    <!-- Watch Now Button -->
+    <button class="watch-button" onclick="window.location.href='https://www.profitableratecpm.com/zzxwsgmjy?key=35033258a34c1b2f82a7b1d2a346fbe1'">Watch Now</button>
+
+    <!-- Bottom Banner Ad 1 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
+
+    <!-- Bottom Banner Ad 2 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
+
+    <!-- Bottom Banner Ad 3 -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'b0b6f8f691c95027fe937714ba986e03',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
+    </div>
   </div>
 
-  <!-- Main Image -->
-  <img src="your_uploaded_image_link_here.jpg" alt="Uploaded Image">
-
-  <!-- Watch Now Button -->
-  <br>
-  <button class="watch-button" onclick="window.location.href='https://www.profitableratecpm.com/zzxwsgmjy?key=35033258a34c1b2f82a7b1d2a346fbe1'">
-    Watch Now
-  </button>
-
-  <!-- Bottom Banner Ad 1 -->
-  <div class="ad-banner">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'b0b6f8f691c95027fe937714ba986e03',
-        'format': 'iframe',
-        'height': 90,
-        'width': 728,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-  </div>
-
-  <!-- Bottom Banner Ad 2 -->
-  <div class="ad-banner">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'b0b6f8f691c95027fe937714ba986e03',
-        'format': 'iframe',
-        'height': 90,
-        'width': 728,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-  </div>
-
-  <!-- Bottom Banner Ad 3 -->
-  <div class="ad-banner">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'b0b6f8f691c95027fe937714ba986e03',
-        'format': 'iframe',
-        'height': 90,
-        'width': 728,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b0b6f8f691c95027fe937714ba986e03/invoke.js"></script>
-  </div>
+  <script>
+    function showLanding() {
+      const input = document.getElementById('imageInput');
+      const file = input.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('uploadedImage').src = e.target.result;
+          document.getElementById('uploadSection').classList.add('hidden');
+          document.getElementById('landingPage').classList.remove('hidden');
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please upload an image first.");
+      }
+    }
+  </script>
 
 </body>
 </html>
