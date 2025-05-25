@@ -1,47 +1,97 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ছবি আপলোড করুন</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ছবি ল্যান্ডিং পেজ</title>
   <style>
     body {
-      text-align: center;
       font-family: sans-serif;
-      background-color: #f0f0f0;
-      padding: 40px;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
     }
-    input, button {
-      padding: 12px;
-      font-size: 16px;
-      margin: 10px;
+
+    #uploadSection, #landingSection {
+      display: none;
+    }
+
+    .banner {
+      margin: 10px auto;
+      width: 90%;
+      max-width: 728px;
+      height: 90px;
+      background-color: #e0e0e0;
+      line-height: 90px;
+      font-size: 18px;
+      color: #444;
+      border: 2px dashed #999;
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      background-color: #d10000;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>আপনার ছবি আপলোড করুন</h1>
-  <input type="file" id="imageUpload" accept="image/*" />
-  <br>
-  <button onclick="createLanding()">ল্যান্ডিং পেজ তৈরি করুন</button>
+
+  <div id="uploadSection">
+    <h2>ছবি আপলোড করে ল্যান্ডিং পেজ তৈরি করুন</h2>
+    <input type="file" id="imageInput" accept="image/*"><br><br>
+    <button onclick="generateLanding()">ল্যান্ডিং পেজ তৈরি করুন</button>
+  </div>
+
+  <div id="landingSection">
+    <div class="banner">ব্যানার ১</div>
+    <div class="banner">ব্যানার ২</div>
+
+    <img id="previewImage" src="" alt="Uploaded Image">
+
+    <div class="banner">ব্যানার ৩</div>
+    <div class="banner">ব্যানার ৪</div>
+    <div class="banner">ব্যানার ৫</div>
+
+    <button onclick="watchNow()">Watch Now</button>
+  </div>
 
   <script>
-    function createLanding() {
-      const fileInput = document.getElementById('imageUpload');
-      const file = fileInput.files[0];
+    document.getElementById('uploadSection').style.display = 'block';
+
+    function generateLanding() {
+      const input = document.getElementById('imageInput');
+      const file = input.files[0];
 
       if (!file) {
-        alert('একটি ছবি নির্বাচন করুন।');
+        alert("একটি ছবি নির্বাচন করুন");
         return;
       }
 
       const reader = new FileReader();
       reader.onload = function(e) {
-        const base64Image = encodeURIComponent(e.target.result);
-        const link = `landing.html?img=${base64Image}`;
-        window.open(link, '_blank');
+        document.getElementById('previewImage').src = e.target.result;
+        document.getElementById('uploadSection').style.display = 'none';
+        document.getElementById('landingSection').style.display = 'block';
       };
       reader.readAsDataURL(file);
     }
+
+    function watchNow() {
+      window.location.href = "https://example.com"; // এখানে তোমার ডিরেক্ট লিংক দাও
+    }
   </script>
+
 </body>
 </html>
