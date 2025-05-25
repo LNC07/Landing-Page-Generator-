@@ -32,7 +32,7 @@
     img {
       max-width: 90%;
       height: auto;
-      margin: 20px 0 10px 0;
+      margin: 10px 0;
     }
 
     button {
@@ -56,14 +56,20 @@
   </div>
 
   <div id="landingSection">
+    <!-- ছবির উপরের 2টি ব্যানার -->
+    <div class="banner">ব্যানার ১ (উপরে)</div>
+    <div class="banner">ব্যানার ২ (উপরে)</div>
+
+    <!-- ছবি -->
     <img id="previewImage" src="" alt="Uploaded Image">
+
+    <!-- Watch Now Button -->
     <button onclick="watchNow()">Watch Now</button>
 
-    <div class="banner">ব্যানার ১</div>
-    <div class="banner">ব্যানার ২</div>
-    <div class="banner">ব্যানার ৩</div>
-    <div class="banner">ব্যানার ৪</div>
-    <div class="banner">ব্যানার ৫</div>
+    <!-- নিচের 3টি ব্যানার -->
+    <div class="banner">ব্যানার ৩ (নিচে)</div>
+    <div class="banner">ব্যানার ৪ (নিচে)</div>
+    <div class="banner">ব্যানার ৫ (নিচে)</div>
   </div>
 
   <script>
@@ -88,7 +94,7 @@
     }
 
     function watchNow() {
-      window.location.href = "https://example.com"; // এখানে তোমার Direct লিংক দাও
+      window.location.href = "https://example.com"; // এখানে তোমার ডিরেক্ট লিংক বসাও
     }
   </script>
 
